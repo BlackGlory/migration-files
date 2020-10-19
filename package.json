@@ -9,6 +9,9 @@
     "up",
     "down"
   ],
+  "files": [
+    "lib"
+  ],
   "main": "lib/es2018/index.js",
   "types": "lib/es2018/index.d.ts",
   "repository": "git@github.com:BlackGlory/migrations-file.git",
