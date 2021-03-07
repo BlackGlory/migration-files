@@ -1,6 +1,6 @@
 {
   "name": "migrations-file",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A utility for reading SQL-based migration files",
   "keywords": [
     "sql",
