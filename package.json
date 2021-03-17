@@ -40,14 +40,14 @@
     }
   },
   "devDependencies": {
-    "@blackglory/jest-matchers": "^0.1.12",
+    "@blackglory/jest-matchers": "^0.1.13",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.14",
-    "@types/node": "^14.14.32",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
-    "eslint": "^7.21.0",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
     "husky": "^4.3.0",
     "jest": "^26.5.3",
     "npm-run-all": "^4.1.5",
@@ -58,6 +58,6 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "extra-promise": "^0.15.4"
+    "extra-promise": "^0.15.6"
   }
 }
