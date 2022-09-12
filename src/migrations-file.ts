@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs'
 import * as path from 'path'
 import { map } from 'extra-promise'
+import { compareNumbersAscending } from 'extra-sort'
 
 export interface Migration {
   filename: string
@@ -18,7 +19,7 @@ export async function readMigrations(migrationsPath: string): Promise<Migration[
     .filter(x => filenameRegExp.test(x))
     .map(x => path.join(migrationsPath, x))
   const migrations = await map(migrationFilenames, readMigrationFile)
-  return migrations.sort((a, b) => a.version - b.version)
+  return migrations.sort((a, b) => compareNumbersAscending(a.version, b.version))
 }
 
 export async function readMigrationFile(filename: string): Promise<Migration> {

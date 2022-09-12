@@ -59,6 +59,7 @@
     "typescript": "^4.8.3"
   },
   "dependencies": {
-    "extra-promise": "^3.2.1"
+    "extra-promise": "^3.2.1",
+    "extra-sort": "^0.1.1"
   }
 }
