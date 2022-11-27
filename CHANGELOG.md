@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/BlackGlory/migration-files/compare/v0.3.0...v0.4.0) (2022-11-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* The project was rewirtten
+
+### Features
+
+* rewrite ([bd46b4e](https://github.com/BlackGlory/migration-files/commit/bd46b4eef7a7a755d88da0f2d434b678440cafbe))
+
 ## [0.3.0](https://github.com/BlackGlory/migration-files/compare/v0.2.5...v0.3.0) (2022-11-27)
 
 
