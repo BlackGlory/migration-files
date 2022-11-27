@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/BlackGlory/migration-files/compare/v0.2.5...v0.3.0) (2022-11-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* Renamed the package name `migrations-file` to `migration-files`
+
+* rename the package name ([d963d2c](https://github.com/BlackGlory/migration-files/commit/d963d2c1ff0b7cb2fc6a3dd1339e5ddabe7d0d7b))
+
 ### [0.2.5](https://github.com/BlackGlory/migrations-file/compare/v0.2.4...v0.2.5) (2022-09-12)
 
 ### [0.2.4](https://github.com/BlackGlory/migrations-file/compare/v0.2.3...v0.2.4) (2022-08-06)
