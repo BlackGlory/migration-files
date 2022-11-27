@@ -2,7 +2,6 @@
 A utility for reading SQL-based migration files.
 
 ## Install
-
 ```sh
 npm install --save migrations-file
 # or
@@ -10,9 +9,7 @@ yarn add migrations-file
 ```
 
 ## API
-
 ### Migration
-
 ```ts
 interface Migration {
   filename: string
@@ -24,19 +21,16 @@ interface Migration {
 ```
 
 ### readMigrationFile
-
 ```ts
 function readMigrationFile(filename: string): Promise<Migration>
 ```
 
 ### readMigrations
-
 ```ts
 function readMigrations(migrationsPath: string): Promise<Migration[]>
 ```
 
 ## SQL migrations format
-
 001-initial.sql
 ```sql
 --------------------------------------------------------------------------------
@@ -45,6 +39,7 @@ function readMigrations(migrationsPath: string): Promise<Migration[]>
 CREATE TABLE test (
   id INTEGER PRIMARY KEY
 );
+
 --------------------------------------------------------------------------------
 -- Down
 --------------------------------------------------------------------------------
@@ -58,6 +53,7 @@ DROP TABLE test;
 --------------------------------------------------------------------------------
 ALTER TABLE test
   ADD COLUMN name TEXT;
+
 --------------------------------------------------------------------------------
 -- Down
 --------------------------------------------------------------------------------
