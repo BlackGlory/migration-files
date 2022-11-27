@@ -3,9 +3,9 @@ A utility for reading SQL-based migration files.
 
 ## Install
 ```sh
-npm install --save migrations-file
+npm install --save migration-files
 # or
-yarn add migrations-file
+yarn add migration-files
 ```
 
 ## API

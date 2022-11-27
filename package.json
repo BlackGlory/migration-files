@@ -1,5 +1,5 @@
 {
-  "name": "migrations-file",
+  "name": "migration-files",
   "version": "0.2.5",
   "description": "A utility for reading SQL-based migration files",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "main": "lib/es2018/index.js",
   "types": "lib/es2018/index.d.ts",
-  "repository": "git@github.com:BlackGlory/migrations-file.git",
+  "repository": "git@github.com:BlackGlory/migration-files.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
   "license": "MIT",
   "sideEffects": false,
