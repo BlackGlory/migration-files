@@ -1,4 +1,4 @@
-# migrations-file
+# migration-files
 A utility for reading SQL-based migration files.
 
 ## Install
