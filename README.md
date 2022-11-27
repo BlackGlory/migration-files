@@ -8,29 +8,16 @@ npm install --save migration-files
 yarn add migration-files
 ```
 
-## API
-### Migration
+## Usage
 ```ts
-interface Migration {
-  filename: string
-  version: number
-  name: string
-  up: string
-  down: string
-}
+import { map } from 'extra-promise'
+import { findMigrationFilenames, readMigrationFile } from 'migration-files'
+
+const filenames = await findMigrationFilenames('./migrations')
+const migrations = await map(filenames, readMigrationFile)
 ```
 
-### readMigrationFile
-```ts
-function readMigrationFile(filename: string): Promise<Migration>
-```
-
-### readMigrations
-```ts
-function readMigrations(migrationsPath: string): Promise<Migration[]>
-```
-
-## SQL migrations format
+## Migration format
 001-initial.sql
 ```sql
 --------------------------------------------------------------------------------
@@ -73,4 +60,26 @@ BEGIN TRANSACTION;
         SELECT id FROM test_backup;
   DROP TABLE test_backup;
 COMMIT;
+```
+
+## API
+### Migration
+```ts
+interface Migration {
+  filename: string
+  version: number
+  name: string
+  up: string
+  down: string
+}
+```
+
+### readMigrationFile
+```ts
+function readMigrationFile(filename: string): Promise<Migration>
+```
+
+### findMigrationFilenames
+```ts
+function findMigrationFilenames(dirname: string): Promise<string[]>
 ```
