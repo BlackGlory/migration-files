@@ -1,5 +1,5 @@
 # migration-files
-A utility for reading SQL-based migration files.
+Utilities for SQL-based migration files.
 
 ## Install
 ```sh
