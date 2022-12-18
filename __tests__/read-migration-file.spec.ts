@@ -1,7 +1,6 @@
 import { readMigrationFile } from '@src/read-migration-file'
 import { getFixtureFilename } from './utils'
 import { getErrorAsync } from 'return-style'
-import '@blackglory/jest-matchers'
 
 describe('readMigrationFile', () => {
   test('migration file', async () => {
