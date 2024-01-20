@@ -8,6 +8,7 @@ test('findMigrationFilenames', async () => {
 
   expect(result).toEqual([
     getFixtureFilename('001-initial.sql')
-  , getFixtureFilename('002-add name column.sql')
+  , getFixtureFilename('002-add-name-column.sql')
+  , getFixtureFilename('003-invalid.sql')
   ])
 })

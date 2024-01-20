@@ -82,3 +82,8 @@ function readMigrationFile(filename: string): Promise<IMigration>
 ```ts
 function findMigrationFilenames(dirname: string): Promise<string[]>
 ```
+
+### parseMigrationFile
+```ts
+function parseMigrationFile(filename: string, content: string): IMigration
+```
