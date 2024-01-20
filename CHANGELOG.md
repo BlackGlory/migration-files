@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/BlackGlory/migration-files/compare/v0.4.1...v0.4.2) (2024-01-20)
+
+
+### Features
+
+* add `parseMigrationFile` ([4947860](https://github.com/BlackGlory/migration-files/commit/4947860fe98e43f2bed46b336ed0dd44ee3ff74b))
+
 ### [0.4.1](https://github.com/BlackGlory/migration-files/compare/v0.4.0...v0.4.1) (2023-06-11)
 
 
