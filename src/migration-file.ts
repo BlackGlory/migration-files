@@ -1,18 +1,13 @@
 import path from 'path'
 
-export interface Migration {
-  filename: string
-  version: number
-  name: string
-  up: string
-  down: string
-}
-
 const migrationFilenameRegExp = /^(?<version>\d+)-(?<name>.+)\.sql/
 
 export function parseMigrationFilename(
   filename: string
-): { name: string; version: number } | undefined {
+): {
+  name: string
+  version: number
+} | undefined {
   const basename = path.basename(filename)
   const result = basename.match(migrationFilenameRegExp)
   if (!result) return
@@ -23,7 +18,10 @@ export function parseMigrationFilename(
   return { name, version }
 }
 
-export function parseMigrationText(text: string): { up: string; down: string } | undefined {
+export function parseMigrationText(text: string): {
+  up: string
+  down: string
+} | undefined {
   const upCommentBlockResult = text.match(/^(-+)\n^-- Up\n^\1\n/m)
   if (!upCommentBlockResult) return
 

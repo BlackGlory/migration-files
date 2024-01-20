@@ -63,9 +63,8 @@ COMMIT;
 ```
 
 ## API
-### Migration
 ```ts
-interface Migration {
+interface IMigration {
   filename: string
   version: number
   name: string
@@ -76,7 +75,7 @@ interface Migration {
 
 ### readMigrationFile
 ```ts
-function readMigrationFile(filename: string): Promise<Migration>
+function readMigrationFile(filename: string): Promise<IMigration>
 ```
 
 ### findMigrationFilenames

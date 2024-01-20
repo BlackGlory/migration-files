@@ -1,8 +1,9 @@
 import fs from 'fs/promises'
 import { go, assert } from '@blackglory/prelude'
-import { parseMigrationFilename, parseMigrationText, Migration } from './migration-file'
+import { parseMigrationFilename, parseMigrationText } from './migration-file'
+import { IMigration } from './types'
 
-export async function readMigrationFile(filename: string): Promise<Migration> {
+export async function readMigrationFile(filename: string): Promise<IMigration> {
   const { name, version } = go(() => {
     const result = parseMigrationFilename(filename)
     assert(result, 'Invalid migration filename')
