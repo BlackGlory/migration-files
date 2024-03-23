@@ -4,21 +4,41 @@ import { getFixtureFilename } from './utils'
 import { getErrorAsync } from 'return-style'
 
 describe('parseMigrationFile', () => {
-  test('migration file', async () => {
-    const filename = getFixtureFilename('001-initial.sql')
-    const content = await fs.readFile(filename, 'utf-8')
+  describe('migration file', () => {
+    test('LF', async () => {
+      const filename = getFixtureFilename('001-initial.sql')
+      const content = await fs.readFile(filename, 'utf-8')
 
-    const result = parseMigrationFile(filename, content)
+      const result = parseMigrationFile(filename, content)
 
-    expect(result).toStrictEqual({
-      version: 1
-    , name: 'initial'
-    , filename
-    , up: 'CREATE TABLE test (' + '\n'
-        + '  id INTEGER PRIMARY KEY' + '\n'
-        + ');' + '\n'
-        + '\n'
-    , down: 'DROP TABLE test;' + '\n'
+      expect(result).toStrictEqual({
+        version: 1
+      , name: 'initial'
+      , filename
+      , up: 'CREATE TABLE test (' + '\n'
+          + '  id INTEGER PRIMARY KEY' + '\n'
+          + ');' + '\n'
+          + '\n'
+      , down: 'DROP TABLE test;' + '\n'
+      })
+    })
+
+    test('CRLF', async () => {
+      const filename = getFixtureFilename('001-initial.sql')
+      const content = (await fs.readFile(filename, 'utf-8')).replace(/\n/g, '\r\n')
+
+      const result = parseMigrationFile(filename, content)
+
+      expect(result).toStrictEqual({
+        version: 1
+      , name: 'initial'
+      , filename
+      , up: 'CREATE TABLE test (' + '\r\n'
+          + '  id INTEGER PRIMARY KEY' + '\r\n'
+          + ');' + '\r\n'
+          + '\r\n'
+      , down: 'DROP TABLE test;' + '\r\n'
+      })
     })
   })
 
