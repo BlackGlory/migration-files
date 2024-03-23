@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/BlackGlory/migration-files/compare/v0.4.2...v0.4.3) (2024-03-23)
+
+
+### Bug Fixes
+
+* regex to account for optional line breaks from windows file ([bbb02e3](https://github.com/BlackGlory/migration-files/commit/bbb02e3cdcd69dd1ad012f41197b53f31796a6f5))
+
 ### [0.4.2](https://github.com/BlackGlory/migration-files/compare/v0.4.1...v0.4.2) (2024-01-20)
 
 
