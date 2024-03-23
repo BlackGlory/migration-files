@@ -22,14 +22,14 @@ export function parseMigrationText(text: string): {
   up: string
   down: string
 } | undefined {
-  const upCommentBlockResult = text.match(/^(-+)\n^-- Up\n^\1\n/m)
+  const upCommentBlockResult = text.match(/^(-+)\r?\n^-- Up\r?\n^\1\r?\n/m)
   if (!upCommentBlockResult) return
 
   const upCommentBlockStart = upCommentBlockResult.index!
   const upCommentBlockEnd = upCommentBlockStart + upCommentBlockResult[0].length
 
   const textAfterUp = text.slice(upCommentBlockEnd)
-  const downCommentBlockResult = textAfterUp.match(/^(-+)\n^-- Down\n^\1\n/m)
+  const downCommentBlockResult = textAfterUp.match(/^(-+)\r?\n^-- Down\r?\n^\1\r?\n/m)
   if (!downCommentBlockResult) return
 
   const downCommentBlockStart = upCommentBlockEnd + downCommentBlockResult.index!
